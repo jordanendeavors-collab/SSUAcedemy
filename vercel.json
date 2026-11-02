@@ -1,7 +1,12 @@
 {
-  "cleanUrls": true,
+  "headers": [
+    { "source": "/", "headers": [ { "key": "Cache-Control", "value": "no-store" } ] }
+  ],
   "redirects": [
-    { "source": "/training", "destination": "/hub/hub-training.html", "permanent": false },
-    { "source": "/hub/site", "destination": "/", "permanent": false }
+    { "source": "/track.html", "destination": "https://www.smartsecurityuniversity.academy/track.html", "permanent": false },
+    { "source": "/study.html", "destination": "https://www.smartsecurityuniversity.academy/study.html", "permanent": false },
+    { "source": "/dashboard.html", "destination": "https://www.smartsecurityuniversity.academy/dashboard.html", "permanent": false },
+    { "source": "/img/:file*", "destination": "https://www.smartsecurityuniversity.academy/img/:file*", "permanent": false },
+    { "source": "/:path+", "destination": "https://www.smartsecurityuniversity.academy/study.html", "permanent": false }
   ]
 }
